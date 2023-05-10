@@ -1,0 +1,47 @@
+CREATE DATABASE enterpriseDB;
+USE enterpriseDB
+
+CREATE TABLE IF NOT EXISTS director (
+    director_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS department (
+	department_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS employee (
+    employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    department_id INT,
+    role VARCHAR(50),
+    name VARCHAR(50),
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    level INT
+);
+
+CREATE TABLE IF NOT EXISTS task (
+	task_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(500),
+    deadline VARCHAR(50),
+    status VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS assignment (    
+    submit_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    
+    sender_id INT,
+    des_when_sending VARCHAR(100),
+    date_sending VARCHAR(50),
+
+    task_id INT,
+    task_status VARCHAR(50),
+
+    receiver_id INT,
+    des_when_submit VARCHAR(100),
+    date_submit VARCHAR(50),
+    result VARCHAR(100)
+);
