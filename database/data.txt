@@ -1,5 +1,6 @@
 INSERT INTO `department` (`department_id`, `name`) 
-VALUES  (NULL, 'Receiving Department'),
+VALUES  
+        (NULL, 'Receiving Department'),
         (NULL, 'Raw Material Department'),
         (NULL, 'Crushing Department'),
         (NULL, 'Pelling Department'),
@@ -10,21 +11,72 @@ VALUES  (NULL, 'Receiving Department'),
         (NULL, 'Marketing Department'),
         (NULL, 'Production Department');
 
+INSERT INTO `task_new` (`task_id`, `task_name`, `task_description`)
+VALUES 
+        (NULL, 'Project Planning', 'Develop a comprehensive plan for executing a new project'),
+        (NULL, 'Market Research', 'Conduct research on industry trends and consumer behavior'),
+        (NULL, 'Social Media Management', 'Create and execute a social media strategy for the company'),
+        (NULL, 'Financial Analysis', 'Analyze financial data to identify areas for improvement'),
+        (NULL, 'Website Development', 'Design and develop a new company website'),
+        (NULL, 'Content Creation', 'Write engaging and informative content for the company blog'),
+        (NULL, 'Sales Forecasting', 'Develop a model to forecast future sales and revenue'),
+        (NULL, 'Employee Training', 'Develop and deliver training programs for employees'),
+        (NULL, 'Vendor Management', 'Manage relationships with company vendors and suppliers'),
+        (NULL, 'Product Testing', 'Test and evaluate new products before launch');
 
-INSERT INTO `employee` (`employee_id`, `department_id`, `role`, `name`, `username`, `password`, `level`) 
-VALUES  (NULL, '0', 'employee', 'Carl Travis', 'travis@mail.com', 'travis@mail.com', '1'), 
-        (NULL, '8', 'head', 'Isis Rocha', 'rocha@mail.com', 'rocha@mail.com', -1),
-        (NULL, '4', 'head', 'Tiara West', 'west@mail.com', 'west@mail.com', -1),
-        (NULL, '1', 'employee', 'Lillian Estrada', 'estrada@mail.com', 'estrada@mail.com', 2),
-        (NULL, '5', 'head', 'Angela Park', 'park@mail.com', 'park@mail.com', -1),
-        (NULL, '1', 'employee', 'Darion Yates', 'yates@mail.com', 'yates@mail.com', 1),
-        (NULL, '1', 'employee', 'Braylon Herman', 'herman@mail.com', 'herman@mail.com', 3),
-        (NULL, '2', 'employee', 'Muhammad Silva', 'silva@mail.com', 'silva@mail.com', 2),
-        (NULL, '1', 'employee', 'Brogan Curry', 'curry@mail.com', 'curry@mail.com', 1),
-        (NULL, '4', 'employee', 'Lara Maxwell', 'maxwell@mail.com', 'maxwell@mail.com', 3),
-        (NULL, '1', 'employee', 'Jerimiah Johnson', 'johnson@mail.com', 'johnson@mail.com', 2),
-        (NULL, '6', 'head', 'Jasmine Conrad', 'conrad@mail.com', 'conrad@mail.com', -1);               
 
+INSERT INTO `employee` (`employee_id`, `department_id`, `role`, `name`, `username`, `password`, `level`, `department_name`)
+VALUES  
+        (NULL, '0', 'Employee', 'Abby Martin', 'abby@mail.com', 'abby@mail.com', '1', ''),
+        (NULL, '0', 'Employee', 'Bob Lee', 'bob@mail.com', 'bob@mail.com', '2', ''),
+        (NULL, '0', 'Employee', 'Cathy Chen', 'cathy@mail.com', 'cathy@mail.com', '3', ''),
+        (NULL, '0', 'Employee', 'David Lee', 'david@mail.com', 'david@mail.com', '1', ''),
+        (NULL, '0', 'Employee', 'Emily Brown', 'emily@mail.com', 'emily@mail.com', '2', ''),
+        (NULL, '0', 'Employee', 'Frank Wang', 'frank@mail.com', 'frank@mail.com', '3', ''),
+        (NULL, '0', 'Employee', 'George Chen', 'george@mail.com', 'george@mail.com', '1', ''),
+        (NULL, '0', 'Employee', 'Hannah Kim', 'hannah@mail.com', 'hannah@mail.com', '2', ''),
+        (NULL, '0', 'Employee', 'Isabella Lee', 'isabella@mail.com', 'isabella@mail.com', '3', ''),
+        (NULL, '1', 'Employee', 'Jack Smith', 'jack@mail.com', 'jack@mail.com', '1', 'Receiving Department'),
+        (NULL, '1', 'Employee', 'Kevin Chen', 'kevin@mail.com', 'kevin@mail.com', '2', 'Receiving Department'),
+        (NULL, '1', 'Employee', 'Lucy Chen', 'lucy@mail.com', 'lucy@mail.com', '3', 'Receiving Department'),
+        (NULL, '2', 'Employee', 'Mike Lee', 'mike@mail.com', 'mike@mail.com', '1', 'Raw Material Department'),
+        (NULL, '2', 'Employee', 'Nancy Lee', 'nancy@mail.com', 'nancy@mail.com', '2', 'Raw Material Department'),
+        (NULL, '2', 'Employee', 'Oliver Kim', 'oliver@mail.com', 'oliver@mail.com', '3', 'Raw Material Department'),
+        (NULL, '3', 'Employee', 'Paul Kim', 'paul@mail.com', 'paul@mail.com', '1', 'Crushing Department'),
+        (NULL, '3', 'Employee', 'Queenie Wang', 'queenie@mail.com', 'queenie@mail.com', '2', 'Crushing Department'),
+        (NULL, '3', 'Employee', 'Rachel Chen', 'rachel@mail.com', 'rachel@mail.com', '3', 'Crushing Department'),
+        (NULL, '4', 'Employee', 'Steven Chen', 'steven@mail.com', 'steven@mail.com', '1', 'Pelling Department'),
+        (NULL, '4', 'Employee', 'Tommy Lee', 'tommy@mail.com', 'tommy@mail.com', '2', 'Pelling Department'),
+        (NULL, '4', 'Employee', 'Uma Patel', 'uma@mail.com', 'uma@mail.com', '3', 'Pelling Department'),
+        (NULL, '5', 'Employee', 'Victoria Chen', 'victoria@mail.com', 'victoria@mail.com', '1', 'Chopping Department'),
+        (NULL, '5', 'Employee', 'William Park', 'william@mail.com', 'william@mail.com', '2', 'Chopping Department'),
+        (NULL, '5', 'Employee', 'Xavier Lee', 'xavier@mail.com', 'xavier@mail.com', '3', 'Chopping Department'),
+        (NULL, '6', 'Employee', 'Yara Patel', 'yara@mail.com', 'yara@mail.com', '1', 'Cooking-mixing Department'),
+        (NULL, '6', 'Employee', 'Zachary Kim', 'zachary@mail.com', 'zachary@mail.com', '2', 'Cooking-mixing Department'),
+        (NULL, '6', 'Employee', 'Alice Wang', 'alice@mail.com', 'alice@mail.com', '3', 'Cooking-mixing Department'),
+        (NULL, '7', 'Employee', 'Benjamin Lee', 'benjamin@mail.com', 'benjamin@mail.com', '1', 'Blasting Department'),
+        (NULL, '7', 'Employee', 'Carla Kim', 'carla@mail.com', 'carla@mail.com', '2', 'Blasting Department'),
+        (NULL, '7', 'Employee', 'Daniel Chen', 'daniel@mail.com', 'daniel@mail.com', '3', 'Blasting Department'),
+        (NULL, '8', 'Employee', 'Elizabeth Kim', 'elizabeth@mail.com', 'elizabeth@mail.com', '1', 'Food Department'),
+        (NULL, '8', 'Employee', 'Frankie Lee', 'frankie@mail.com', 'frankie@mail.com', '2', 'Food Department'),
+        (NULL, '8', 'Employee', 'Gabriel Chen', 'gabriel@mail.com', 'gabriel@mail.com', '3', 'Food Department'),
+        (NULL, '9', 'Employee', 'Helen Chen', 'helen@mail.com', 'helen@mail.com', '1', 'Marketing Department'),
+        (NULL, '9', 'Employee', 'Isaac Lee', 'isaac@mail.com', 'isaac@mail.com', '2', 'Marketing Department'),
+        (NULL, '9', 'Employee', 'Jasmine Kim', 'jasmine@mail.com', 'jasmine@mail.com', '3', 'Marketing Department'),
+        (NULL, '10', 'Employee', 'Kevin Lee', 'kevinl@mail.com', 'kevinl@mail.com', '1', 'Production Department'),
+        (NULL, '10', 'Employee', 'Linda Chen', 'lindac@mail.com', 'lindac@mail.com', '2', 'Production Department'),
+        (NULL, '10', 'Employee', 'Michael Kim', 'michaelk@mail.com', 'michaelk@mail.com', '3', 'Production Department'),
+
+        (NULL, '1', 'Department_Head', 'Octavia Blake', '101', 'pass', 'Leader', 'Receiving Department'),
+        (NULL, '2', 'Department_Head', 'Iliana Vazquez', '102', 'pass', 'Leader', 'Raw Material Department'),
+        (NULL, '3', 'Department_Head', 'Jovani Valdez', '103', 'pass', 'Leader', 'Crushing Department'),
+        (NULL, '4', 'Department_Head', 'Nala Blackwell', '104', 'pass', 'Leader', 'Pelling Department'),
+        (NULL, '5', 'Department_Head', 'Emmaline Duffy', '105', 'pass', 'Leader', 'Chopping Department'),
+        (NULL, '6', 'Department_Head', 'Bode Owens', '106', 'pass', 'Leader', 'Cooking-mixing Department'),
+        (NULL, '7', 'Department_Head', 'Hollis Bush', '107', 'pass', 'Leader', 'Blasting Department'),
+        (NULL, '8', 'Department_Head', 'Sariyah Hodge', '108', 'pass', 'Leader', 'Food Department'),
+        (NULL, '9', 'Department_Head', 'Anisa Bernard', '109', 'pass', 'Leader', 'Marketing Department'),
+        (NULL, '10', 'Department_Head', 'Gianluca Hogan', '110', 'pass', 'Leader', 'Production Department');
 
 INSERT INTO `task` (`task_id`, `name`, `description`, `deadline`, `status`) 
 VALUES  (NULL, 'Inception', 'This is the first phase of the requirements analysis process. This phase gives an outline of how to get started on a project. In the inception phase, all the basic questions are asked on how to go about a task or the steps required to accomplish a task. ', '20/05/23', 'Available'), 
@@ -36,6 +88,7 @@ VALUES  (NULL, 'Inception', 'This is the first phase of the requirements analysi
         (NULL, 'Requirements Management', 'This is the last phase of the requirements analysis process. Requirements management is a set of activities where the entire team takes part in identifying, controlling, tracking, and establishing the requirements for the successful and smooth implementation of the project.', '20/05/23', 'Available');
 
 
+
 INSERT INTO `assignment` (`submit_id`, `sender_id`, `des_when_sending`, `date_sending`, `task_id`, `task_status`, `receiver_id`, `des_when_submit`, `date_submit`, `result`) 
 VALUES  (NULL, '2', 'Bro, help me this task', '04/05/23', '1', 'Sending', '2', NULL, NULL, NULL), 
         (NULL, 2, 'Bro, help me this task', '04/05/23', '3', 'Reject_1', '3', 'I tried', '05/05/23', NULL),
@@ -44,4 +97,3 @@ VALUES  (NULL, '2', 'Bro, help me this task', '04/05/23', '1', 'Sending', '2', N
         (NULL, 2, 'Bro, help me this task', '04/05/23', '6', 'Submit', '6', 'I completed', '05/05/23', NULL),
         (NULL, 2, 'Bro, help me this task', '04/05/23', '7', 'Reject_2', '7', 'I tried', '05/05/23', NULL),
         (NULL, 2, 'Bro, help me this task', '04/05/23', '1', 'Done', '3', 'I completed', '10/05/23', NULL);
-

@@ -12,6 +12,12 @@ CREATE TABLE IF NOT EXISTS department (
     name VARCHAR(50)
 );
 
+CREATE TABLE IF NOT EXISTS task_new (
+    task_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    task_name VARCHAR(50),
+    task_description VARCHAR(255)
+);
+
 CREATE TABLE IF NOT EXISTS employee (
     employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     department_id INT,
@@ -19,7 +25,8 @@ CREATE TABLE IF NOT EXISTS employee (
     name VARCHAR(50),
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    level INT
+    level VARCHAR(50),
+    department_name VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS task (

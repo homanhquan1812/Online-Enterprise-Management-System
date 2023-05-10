@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
 
-<head>
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
-</head>
-
-<body>
-    <div class="login">
-        <h1>Login</h1>
-        <form action="../../backend/database/admin_login_processing.php" method="post">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</body>
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form method="POST" action="dh_db_connection.php">
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="username" id="username_com" name="username_com" required>
+                            <label for="username_com">Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" id="password_com" name="password_com" required>
+                            <label for="password_com">Password</label>
+                        </div>
+                        <button type="submit" name="login_submit" id="login_submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
 </html>

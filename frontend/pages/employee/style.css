@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("Employee Background.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box {
+    display: absolute;
+    height: 600px;
+    width: 800px;
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border: 2px solid #2a3cad;
+    overflow: auto;
+}
+
+#box::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.5em;
+}
+
+#box::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.information {
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+li {
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+h3 {
+    color: orange;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    /*
+    text-decoration: underline;
+    */
+    font-size: 30px;
+}
+
+/*
+.left_description {
+    width: 70%;
+    float: left;
+    word-wrap: break-word;
+}
+
+.right_description {
+    width: 30%;
+    float: right;
+    word-wrap: break-word;
+}
+*/
+
+.submit_button {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    /*
+    max-width: 100%;
+    min-width: 140px;
+    */
+    width: 160px;
+    padding: 19px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    /* margin-left: 20px; */
+    margin-top: 20px;
+}
+
+.submit_button:active,
+.submit_button:hover {
+  outline: 0;
+}
+
+/*
+.right_description .submit_button {
+    width: 180px;
+}
+
+.right_description .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.custom-file-upload {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    /*
+    max-width: 100%;
+    min-width: 140px;
+    */
+    width: 160px;
+    padding: 19px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    /* margin-left: 20px; */
+    margin-top: 20px;
+}
+
+.custom-file-upload:active,
+.custom-file-upload:hover {
+  outline: 0;
+}
+  
+input[type="file"] {
+    display: none;
+}
+
+/*
+// Fix weird displaying below 2 parts
+.form-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+*/
+
+.choices {
+    margin-left: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.textarea {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 600px;
+    height: 200px;
+    transition: all 0.2s;
+
+    /* Center */
+    display: block;
+    margin: auto;
+}
+  
+.textarea:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+  
+.textarea:focus {
+    cursor: text;
+    color: #333333;
+    background-color: white;
+    border-color: #333333;
+}
+
+.two-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+
+hr {
+    margin: 0 auto;
+    width: 75%;
+}

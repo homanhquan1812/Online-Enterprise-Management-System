@@ -10,7 +10,7 @@
 
 <body>
     <?php require './app/views/components/navbar.php' ?>
-    <h1>Task detail</h1>
+    <h1>Department head page</h1>
 
     <!-- <form action="login.php" method="post">
         <input type="email" name="email" placeholder="Email" required>
